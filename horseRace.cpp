@@ -55,15 +55,14 @@ void advance(int horseNum, int* horses) {
 }
 
 void printLane(int horseNum, int* horses) {
-    for (int pos = 0; pos < TRACK_LENGTH; pos++) {
-        if (pos == horses[horseNum])
+    for (int i = 0; i < TRACK_LENGTH; i++) {
+        if (i == horses[horseNum])
             cout << horseNum;
         else
             cout << '.';
     }
     cout << endl;
 }
-
 
 bool isWinner(int horseNum, int* horses) {
     return horses[horseNum] >= TRACK_LENGTH - 1;
